@@ -1,0 +1,1482 @@
+{
+  "updated": "2026-10-06",
+  "recent_window": {
+    "start": "2026-04-06",
+    "end": "2026-10-06"
+  },
+  "papers": [
+    {
+      "id": "2601.18734",
+      "title": "Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models",
+      "label": "OPSD / Self-Distilled Reasoner",
+      "authors": [
+        "Zhao, Siyan",
+        "Xie, Zhihui",
+        "Liu, Mengchen",
+        "Huang, Jing",
+        "Pang, Guan",
+        "Chen, Feiyu",
+        "Grover, Aditya"
+      ],
+      "first_submitted": "2026-01-26",
+      "url": "https://arxiv.org/abs/2601.18734",
+      "summary": "A problem-only student learns on its own rollouts from a self-teacher given a verified solution. The released main recipe uses a frozen base teacher and pointwise clipping. Foundational background first submitted before the recent coverage window.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2601.18734",
+      "code_url": "https://github.com/siyan-zhao/OPSD",
+      "related_ids": [
+        "2608.06296",
+        "2608.26019"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Foundations and overviews"
+    },
+    {
+      "id": "2604.10674",
+      "title": "Skill-SD: Skill-Conditioned Self-Distillation for Multi-turn LLM Agents",
+      "label": "Skill-SD",
+      "authors": [
+        "Wang, Hao",
+        "Wang, Guozhi",
+        "Xiao, Han",
+        "Zhou, Yufeng",
+        "Pan, Yue",
+        "Wang, Jichao",
+        "Xu, Ke",
+        "Wen, Yafei",
+        "Ruan, Xiaohu",
+        "Chen, Xiaoxin",
+        "Qi, Honggang"
+      ],
+      "first_submitted": "2026-04-12",
+      "url": "https://arxiv.org/abs/2604.10674",
+      "summary": "Teacher-only natural-language skills summarize previous trajectories, with importance-weighted reverse KL and teacher synchronization for stability. A baseline for studying hindsight skills in multi-turn agents.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2604.10674",
+      "code_url": null,
+      "related_ids": [
+        "2606.26790",
+        "2607.14777",
+        "2609.20784"
+      ],
+      "reading_priority": 10,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2604.13010",
+      "title": "Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline On-Policy Distillation",
+      "label": "Lightning OPD",
+      "authors": [
+        "Wu, Yecheng",
+        "Han, Song",
+        "Cai, Han"
+      ],
+      "first_submitted": "2026-04-14",
+      "url": "https://arxiv.org/abs/2604.13010",
+      "summary": "Precomputes teacher scores over SFT rollouts and reuses them under a teacher-consistency condition. Useful for reducing distillation infrastructure cost, but it is an offline approximation to external-teacher OPD, not a new self-teacher mechanism.",
+      "scope": "Adjacent OPD systems",
+      "pdf_url": "https://arxiv.org/pdf/2604.13010",
+      "code_url": "https://github.com/jet-ai-projects/Lightning-OPD",
+      "related_ids": [
+        "2601.18734",
+        "2605.01347"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2604.17535",
+      "title": "OPSDL: On-Policy Self-Distillation for Long-Context Language Models",
+      "label": "OPSDL",
+      "authors": [
+        "Zhang, Xinsen",
+        "Ding, Zhenkai",
+        "Pan, Tianjun",
+        "Yang, Run",
+        "Kang, Chun",
+        "Xiong, Xue",
+        "Gu, Jingnan"
+      ],
+      "first_submitted": "2026-04-19",
+      "url": "https://arxiv.org/abs/2604.17535",
+      "summary": "Uses a short, relevant context as the self-teacher for responses generated from the full long context. Dense log-probability-ratio feedback transfers short-context competence into long-context behavior. Relevant evidence must be preserved when constructing the short context.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2604.17535",
+      "code_url": null,
+      "related_ids": [
+        "2607.28022"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Context and domain extensions"
+    },
+    {
+      "id": "2605.01347",
+      "title": "MAD-OPD: Breaking the Ceiling in On-Policy Distillation via Multi-Agent Debate",
+      "label": "MAD-OPD",
+      "authors": [
+        "Wang, Jianze",
+        "Liu, Ying",
+        "Chen, Jinlong",
+        "Hu, Xuchun",
+        "Zhang, Qilong",
+        "Cao, Yu",
+        "Wang, Jun",
+        "Yang, Hua",
+        "Xie, Yong",
+        "Chen, Qianglong"
+      ],
+      "first_submitted": "2026-05-02",
+      "url": "https://arxiv.org/abs/2605.01347",
+      "summary": "Multiple external teachers debate the student's current state and provide confidence-weighted supervision. A useful teacher-construction comparison, but it is multi-teacher OPD rather than the single-model OPSD setting.",
+      "scope": "Adjacent OPD",
+      "pdf_url": "https://arxiv.org/pdf/2605.01347",
+      "code_url": "https://github.com/chiefovoavicii/MAD-OPD",
+      "related_ids": [
+        "2605.20643",
+        "2609.37132"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2605.08741",
+      "title": "Training with Harnesses: On-Policy Harness Self-Distillation for Complex Reasoning",
+      "label": "OPHSD",
+      "authors": [
+        "Zhao, Zhengyang",
+        "Ma, Lu",
+        "Zhang, Wentao"
+      ],
+      "first_submitted": "2026-05-09",
+      "url": "https://arxiv.org/abs/2605.08741",
+      "summary": "Uses a harness-augmented self-teacher to internalize draft-verify and plan-solve workflows. Distinguish this from keeping a harness at deployment: the evaluated goal is to retain its benefits in the standalone model, with evidence limited to the tested harnesses.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2605.08741",
+      "code_url": "https://github.com/zzy1127/OPHSD-On-Policy-Harness-Self-Distillation",
+      "related_ids": [
+        "2604.10674",
+        "2606.11559"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2605.11182",
+      "title": "The Many Faces of On-Policy Distillation: Pitfalls, Mechanisms, and Fixes",
+      "label": "The Many Faces of OPD",
+      "authors": [
+        "Zhu, Siqi",
+        "Ye, Xuyan",
+        "Lu, Hongyu",
+        "Shi, Weiye",
+        "Liu, Ge"
+      ],
+      "first_submitted": "2026-05-11",
+      "url": "https://arxiv.org/abs/2605.11182",
+      "summary": "Studies teacher-student mismatch, biased TopK reverse-KL gradients, and the distinction between transferable shared rules and instance-specific privileged information. A diagnostic companion to positive OPSD results, rather than evidence that every OPSD recipe fails.",
+      "scope": "OPD / OPSD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2605.11182",
+      "code_url": null,
+      "related_ids": [
+        "2601.18734",
+        "2606.11709",
+        "2610.05070"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2605.13255",
+      "title": "Respecting Self-Uncertainty in On-Policy Self-Distillation for Efficient LLM Reasoning",
+      "label": "EGRSD / CL-EGRSD",
+      "authors": [
+        "Ke, Junlong",
+        "Wen, Zichen",
+        "Li, Weijia",
+        "He, Conghui",
+        "Zhang, Linfeng"
+      ],
+      "first_submitted": "2026-05-13",
+      "url": "https://arxiv.org/abs/2605.13255",
+      "summary": "Combines reward-grounded update direction, likelihood-ratio magnitude, and a teacher-entropy confidence gate. The lookahead variant distinguishes persistent uncertainty from uncertainty that resolves quickly. Compare with position-based weighting rather than assuming entropy is universally reliable.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2605.13255",
+      "code_url": null,
+      "related_ids": [
+        "2610.05070",
+        "2608.14945",
+        "2605.21606"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2605.17497",
+      "title": "Self-Supervised On-Policy Distillation for Reasoning Language Models",
+      "label": "SSOPD",
+      "authors": [
+        "Tan, Zhiquan",
+        "Hong, Yinrong"
+      ],
+      "first_submitted": "2026-05-17",
+      "url": "https://arxiv.org/abs/2605.17497",
+      "summary": "Uses the shortest verified-correct and longest incorrect completion in a rollout group for dense correction. It avoids external solution traces, but still needs correctness verification; this separates it from fully label-free U-OPSD and CoDA.",
+      "scope": "Self-generated, verifier-supervised",
+      "pdf_url": "https://arxiv.org/pdf/2605.17497",
+      "code_url": null,
+      "related_ids": [
+        "2608.06296",
+        "2608.08764"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Unsupervised and self-generated supervision"
+    },
+    {
+      "id": "2605.18141",
+      "title": "A Brief Overview: On-Policy Self-Distillation In Large Language Models",
+      "label": "Brief OPSD Overview",
+      "authors": [
+        "Cui, Fangming",
+        "Li, Sunan",
+        "Li, Jiahong"
+      ],
+      "first_submitted": "2026-05-18",
+      "url": "https://arxiv.org/abs/2605.18141",
+      "summary": "An introductory overview of the OPSD setup and design choices. Included as an orientation reference, not as a new algorithm or independent experimental validation of the original OPSD claims.",
+      "scope": "Survey / orientation",
+      "pdf_url": "https://arxiv.org/pdf/2605.18141",
+      "code_url": null,
+      "related_ids": [
+        "2601.18734"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Foundations and overviews"
+    },
+    {
+      "id": "2605.20643",
+      "title": "AVSD: Adaptive-View Self-Distillation by Balancing Consensus and Teacher-Specific Privileged Signals",
+      "label": "AVSD",
+      "authors": [
+        "Nguyen, Duy",
+        "Xiao, Hanqi",
+        "Prasad, Archiki",
+        "Khan, Zaid",
+        "Das, Anirban",
+        "Zhang, Austin",
+        "Sahu, Sambit",
+        "Lee, Hyunji",
+        "Stengel-Eskin, Elias",
+        "Bansal, Mohit"
+      ],
+      "first_submitted": "2026-05-20",
+      "url": "https://arxiv.org/abs/2605.20643",
+      "summary": "Combines multiple privileged views by separating their shared signal from view-specific residuals. Residuals contribute only when aligned with the consensus, offering a different answer to teacher inconsistency than using a single richer context.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2605.20643",
+      "code_url": "https://github.com/duykhuongnguyen/AVSD",
+      "related_ids": [
+        "2605.01347",
+        "2606.11709"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2605.21606",
+      "title": "When Are Teacher Tokens Reliable? Position-Weighted On-Policy Self-Distillation for Reasoning",
+      "label": "PW-OPSD",
+      "authors": [
+        "Liu, Xiaogeng",
+        "Wang, Xinyan",
+        "Ma, Yingzi",
+        "Zhang, Yechao",
+        "Xiao, Chaowei"
+      ],
+      "first_submitted": "2026-05-20",
+      "url": "https://arxiv.org/abs/2605.21606",
+      "summary": "A branch-viability diagnostic motivates increasing token-position weights while retaining OPSD's rollout and clipped forward-KL target. The reported local uncertainty predictors are weak in its diagnostic, making it an important comparison for entropy-based recipes.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2605.21606",
+      "code_url": "https://github.com/SaFo-Lab/PW-OPSD",
+      "related_ids": [
+        "2610.05070",
+        "2605.13255"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2605.22263",
+      "title": "Tailoring Teaching to Aptitude: Direction-Adaptive Self-Distillation for LLM Reasoning",
+      "label": "DASD",
+      "authors": [
+        "Zhang, Hongbin",
+        "Wang, Chaozheng",
+        "Chen, Kehai",
+        "Pan, Youcheng",
+        "Xiang, Yang",
+        "Wang, Jinpeng",
+        "Zhang, Min"
+      ],
+      "first_submitted": "2026-05-21",
+      "url": "https://arxiv.org/abs/2605.22263",
+      "summary": "Routes the direction of teacher supervision by token entropy: attraction at low entropy and repulsion at high entropy. A more interventionist response to lost exploration than merely clipping or downweighting teacher signals.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2605.22263",
+      "code_url": null,
+      "related_ids": [
+        "2606.11709",
+        "2610.05070",
+        "2607.05184"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2605.28014",
+      "title": "Beyond Imitation: Reflective On-Policy Self-Distillation for LLM Reasoning",
+      "label": "ROSD",
+      "authors": [
+        "Zhao, Ziqi",
+        "Ma, Xinyu",
+        "Yang, Liu",
+        "Feng, Yujie",
+        "Shi, Daiting",
+        "He, Jingzhou",
+        "Xin, Xin",
+        "Ren, Zhaochun",
+        "Wu, Xiao-Ming"
+      ],
+      "first_submitted": "2026-05-27",
+      "url": "https://arxiv.org/abs/2605.28014",
+      "summary": "A self-reflector contrasts successful and failed rollouts, extracts a corrective idea, and locates the first erroneous sentence. Distillation skips the valid prefix of diagnosed failures, targeting correction while seeking to preserve reasoning diversity.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2605.28014",
+      "code_url": "https://github.com/ZiqiZhao1/ROSD",
+      "related_ids": [
+        "2610.05070",
+        "2606.11709",
+        "2606.26091"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2606.00755",
+      "title": "Internalize the Temperature: On-Policy Self-Distillation as Policy Reheater for Reinforcement Learning",
+      "label": "TS-OPSD / Policy Reheater",
+      "authors": [
+        "Yang, Xuewei",
+        "Yu, Jiachen",
+        "Wu, Jie",
+        "Sun, Shaoning",
+        "Wang, Junjie",
+        "Yang, Yujiu"
+      ],
+      "first_submitted": "2026-05-30",
+      "url": "https://arxiv.org/abs/2606.00755",
+      "summary": "Distills a temperature-smoothed copy of an entropy-collapsed policy back into itself before continuing RL. Its teacher advantage is a distribution transformation, not a privileged answer; the metadata first-submission date is May 30 despite the June arXiv identifier.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2606.00755",
+      "code_url": null,
+      "related_ids": [
+        "2608.26019",
+        "2609.05295"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2606.09498",
+      "title": "Self-Harness: Harnesses That Improve Themselves",
+      "label": "Self-Harness",
+      "authors": [
+        "Zhang, Hangfan",
+        "Zhang, Shao",
+        "Li, Kangcong",
+        "Zhang, Chen",
+        "Chen, Yang",
+        "Zhang, Yiqun",
+        "Bai, Lei",
+        "Hu, Shuyue"
+      ],
+      "first_submitted": "2026-06-08",
+      "url": "https://arxiv.org/abs/2606.09498",
+      "summary": "Improves the external harness through weakness mining, candidate edits, and regression-based acceptance while keeping model weights fixed. It can supply better training scaffolds, but does not itself perform token-level on-policy self-distillation.",
+      "scope": "Adjacent harness work",
+      "pdf_url": "https://arxiv.org/pdf/2606.09498",
+      "code_url": null,
+      "related_ids": [
+        "2605.08741",
+        "2609.24974"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2606.11559",
+      "title": "HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation",
+      "label": "HERO",
+      "authors": [
+        "Liu, Haoran",
+        "Zhang, Yuwei",
+        "Li, Xiyao",
+        "Lyu, Bohan",
+        "Shang, Jingbo"
+      ],
+      "first_submitted": "2026-06-10",
+      "url": "https://arxiv.org/abs/2606.11559",
+      "summary": "Compresses completed interactions into local hindsight diagnoses grounded in the next environment observation. Re-scores original action tokens with turn-specific hints, addressing the mismatch between whole-trajectory feedback and the agent's local decision.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2606.11559",
+      "code_url": null,
+      "related_ids": [
+        "2606.26790",
+        "2608.05987",
+        "2607.28076"
+      ],
+      "reading_priority": 11,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2606.11709",
+      "title": "RLCSD: Reinforcement Learning with Contrastive On-Policy Self-Distillation",
+      "label": "RLCSD",
+      "authors": [
+        "Pan, Leyi",
+        "Tao, Shuchang",
+        "Zhai, Yunpeng",
+        "Zhang, Lingzhe",
+        "Liu, Zhaoyang",
+        "Ding, Bolin",
+        "Liu, Aiwei",
+        "Wen, Lijie"
+      ],
+      "first_submitted": "2026-06-10",
+      "url": "https://arxiv.org/abs/2606.11709",
+      "summary": "Contrasts correct-hint and wrong-hint teacher signals to reduce privilege-induced style drift, then uses the contrast for verifier-grounded credit modulation. This is a close companion to SIPO and the thinking-collapse diagnostics.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2606.11709",
+      "code_url": "https://github.com/THU-BPM/RLCSD",
+      "related_ids": [
+        "2609.36742",
+        "2607.02234"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2606.26091",
+      "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+      "label": "Sampled Demonstrations & Diversity",
+      "authors": [
+        "Nicolicioiu, Andrei Liviu",
+        "Pezeshki, Mohammad",
+        "Courville, Aaron"
+      ],
+      "first_submitted": "2026-06-24",
+      "url": "https://arxiv.org/abs/2606.26091",
+      "summary": "Analyzes how conditioning on sampled correct demonstrations can compound existing mode preferences. Graph path-finding and science QA experiments motivate evaluating pass@k and functional diversity alongside average success.",
+      "scope": "OPSD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2606.26091",
+      "code_url": null,
+      "related_ids": [
+        "2608.06296",
+        "2605.28014",
+        "2607.05184"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2606.26790",
+      "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
+      "label": "OPID",
+      "authors": [
+        "Yang, Shuo",
+        "Wu, Jinyang",
+        "Lu, Zhengxi",
+        "Shen, Yuhao",
+        "Zhang, Fan",
+        "Feng, Lang",
+        "Zhang, Shuai",
+        "Luo, Haoran",
+        "Lian, Zheng",
+        "Wen, Zhengqi",
+        "Tao, Jianhua"
+      ],
+      "first_submitted": "2026-06-25",
+      "url": "https://arxiv.org/abs/2606.26790",
+      "summary": "Extracts episode-level and critical-step hindsight skills from completed on-policy trajectories. Re-scoring the original responses with those skills supplies a dense auxiliary advantage alongside outcome-based RL.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2606.26790",
+      "code_url": "https://github.com/jinyangwu/OPID",
+      "related_ids": [
+        "2604.10674",
+        "2606.11559"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2607.01763",
+      "title": "Denser $\\neq$ Better: Limits of On-Policy Self-Distillation for Continual Post-Training",
+      "label": "Denser ≠ Better",
+      "authors": [
+        "Wang, Meng",
+        "Zhao, Haohan",
+        "Liu, Wenzhuo",
+        "Yang, Lu",
+        "Liu, Geng",
+        "Guo, Haiyang",
+        "Xie, Guo-Sen",
+        "Meng, Gaofeng",
+        "Liu, Hongbin",
+        "Zhu, Fei"
+      ],
+      "first_submitted": "2026-07-02",
+      "url": "https://arxiv.org/abs/2607.01763",
+      "summary": "Tests SDPO in continual post-training and links failures to teacher instability, drift, and reinforced artifacts. On-policy data and dense feedback do not automatically prevent forgetting; conclusions are scoped to the evaluated protocols.",
+      "scope": "OPSD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2607.01763",
+      "code_url": "https://github.com/Moenupa/SDPO-CL",
+      "related_ids": [
+        "2608.09745",
+        "2608.26019",
+        "2609.20784"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2607.02234",
+      "title": "Purified OPSD: On-Policy Self-Distillation Without Losing How to Think",
+      "label": "Purified OPSD",
+      "authors": [
+        "Shen, Zhanming",
+        "Tong, Jintao",
+        "Yan, Shaotian",
+        "Shen, Chen",
+        "Chen, Hao",
+        "Ye, Wentao",
+        "Hu, Xiaomeng",
+        "Miao, Rui",
+        "Wang, Haobo",
+        "Zhao, Junbo",
+        "Chen, Gang",
+        "Ye, Jieping"
+      ],
+      "first_submitted": "2026-07-02",
+      "url": "https://arxiv.org/abs/2607.02234",
+      "summary": "Uses a reference-only teacher to estimate the shortcut component of privileged supervision, then forms a PMI-based residual target anchored to a clean base distribution. Closely related to RLCSD's attempt to separate useful corrections from context-induced style changes.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2607.02234",
+      "code_url": null,
+      "related_ids": [
+        "2606.11709",
+        "2607.05184"
+      ],
+      "reading_priority": 4,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2607.04428",
+      "title": "dOPSD: On-Policy Self-Distillation for Diffusion Language Models",
+      "label": "dOPSD",
+      "authors": [
+        "Dat, Phuong Tuan",
+        "Li, Qi",
+        "Wang, Xinchao"
+      ],
+      "first_submitted": "2026-07-05",
+      "url": "https://arxiv.org/abs/2607.04428",
+      "summary": "Constructs the teacher's privilege from a later, more decoded state of the student's own diffusion trajectory. Extends the self-teaching idea beyond autoregressive LMs without relying on an externally supplied solution.",
+      "scope": "Core OPSD, diffusion LM",
+      "pdf_url": "https://arxiv.org/pdf/2607.04428",
+      "code_url": "https://github.com/tuandattt/dOPSD",
+      "related_ids": [
+        "2608.06296",
+        "2604.17535"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Context and domain extensions"
+    },
+    {
+      "id": "2607.05184",
+      "title": "Rethinking On-Policy Self-Distillation for Thinking Models",
+      "label": "Rethinking OPSD for Thinking Models",
+      "authors": [
+        "Kaur, Simran",
+        "Ri, Narutatsu",
+        "He, Yinghui",
+        "Fowl, Liam",
+        "Arora, Sanjeev"
+      ],
+      "first_submitted": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05184",
+      "summary": "Reports degradation in five thinking models and examines suppressed self-correction at high-entropy branching points. Essential context for interpreting gains obtained with non-thinking training and thinking-enabled evaluation.",
+      "scope": "OPSD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2607.05184",
+      "code_url": "https://github.com/princeton-pli/rethinking-opsd-for-thinking-models",
+      "related_ids": [
+        "2601.18734",
+        "2606.11709",
+        "2610.05070"
+      ],
+      "reading_priority": 1,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2607.10805",
+      "title": "Diagnosing and Mitigating Thinking Collapse in On-Policy Self-Distillation",
+      "label": "AD-OPSD / Thinking Collapse",
+      "authors": [
+        "Peng, Keqin",
+        "Li, Chen",
+        "Ouyang, Yuanxin",
+        "Yuan, Yancheng",
+        "Ding, Liang"
+      ],
+      "first_submitted": "2026-07-12",
+      "url": "https://arxiv.org/abs/2607.10805",
+      "summary": "Diagnoses suppression of epistemic tokens at uncertain decision forks and selectively anchors risky updates to a frozen base prior. Provides a targeted safeguard to compare against clipping, PMI purification, and entropy routing.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2607.10805",
+      "code_url": null,
+      "related_ids": [
+        "2607.05184",
+        "2607.02234",
+        "2608.09745"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2607.13399",
+      "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
+      "label": "Demystifying OPD",
+      "authors": [
+        "Wang, Rui",
+        "Wang, Hongru",
+        "Chen, Yi",
+        "Xue, Boyang",
+        "Fang, Tianqing",
+        "Yu, Wenhao",
+        "Wong, Kam-Fai"
+      ],
+      "first_submitted": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13399",
+      "summary": "Studies teacher-student mismatch and length exploitation in OPD, with clipping and log-scale compression as signal controls. Relevant to OPSD implementation and evaluation, but broader external-teacher findings should not be assumed to transfer unchanged.",
+      "scope": "Adjacent OPD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2607.13399",
+      "code_url": null,
+      "related_ids": [
+        "2606.11709",
+        "2608.26019"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2607.14777",
+      "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
+      "label": "SEED",
+      "authors": [
+        "Wu, Jinyang",
+        "Yang, Shuo",
+        "Lu, Zhengxi",
+        "Zhang, Fan",
+        "Shen, Yuhao",
+        "Feng, Lang",
+        "Luo, Haoran",
+        "Lian, Zheng",
+        "Zhang, Shuai",
+        "Wen, Zhengqi",
+        "Tao, Jianhua"
+      ],
+      "first_submitted": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14777",
+      "summary": "First teaches the policy to produce hindsight skills, then uses the improving policy as both actor and skill analyzer during joint RL and distillation. Its initial skill-training stage should be distinguished from a method that needs no external supervision at any stage.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2607.14777",
+      "code_url": "https://github.com/jinyangwu/SEED",
+      "related_ids": [
+        "2604.10674",
+        "2609.27307"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2607.26722",
+      "title": "DREvo: Distilling Recalibrated Historical Experience for Harness Self-Evolution",
+      "label": "DREvo",
+      "authors": [
+        "Guo, Hanghui",
+        "Shi, Weijie",
+        "Chen, Zhangze",
+        "Xu, Shengxiang",
+        "Wang, Yishu",
+        "Zhang, Yimei",
+        "Ni, Wangze",
+        "Zhu, Jia",
+        "Di, Shimin"
+      ],
+      "first_submitted": "2026-07-29",
+      "url": "https://arxiv.org/abs/2607.26722",
+      "summary": "Reassesses historical evidence and turns it into search guidance for harness changes. The optimized artifact is the harness, so its use of 'distillation' should not be confused with OPSD updates to model weights.",
+      "scope": "Adjacent harness work",
+      "pdf_url": "https://arxiv.org/pdf/2607.26722",
+      "code_url": null,
+      "related_ids": [
+        "2606.09498",
+        "2609.24974"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2607.28022",
+      "title": "Flux-OPD: On-Policy Distillation with Evolving Contexts",
+      "label": "Flux-OPD",
+      "authors": [
+        "Wang, Yuran",
+        "Wang, Zekun",
+        "Zeng, Bohan",
+        "Zhang, Ruixu",
+        "Liu, Wenxuan",
+        "Yang, Liu",
+        "Dai, Yifan",
+        "Shi, Yang",
+        "Li, Bozhou",
+        "Tong, Chengzhuo",
+        "Hua, Daili",
+        "Zhang, Yuanxing",
+        "Zhang, Wentao"
+      ],
+      "first_submitted": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28022",
+      "summary": "Handles evolving contexts using an anchored contextual difference signal and conflict-dependent weighting. A useful extension for open-ended tasks where a fixed privileged context becomes stale; broader context distillation rather than only answer-conditioned OPSD.",
+      "scope": "Context distillation",
+      "pdf_url": "https://arxiv.org/pdf/2607.28022",
+      "code_url": null,
+      "related_ids": [
+        "2608.09745",
+        "2604.17535",
+        "2608.13040"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Context and domain extensions"
+    },
+    {
+      "id": "2607.28076",
+      "title": "Group-Reflective Self-Distillation for Agentic Reinforcement Learning",
+      "label": "GRSD",
+      "authors": [
+        "Zheng, Binbin",
+        "Xie, Zijun",
+        "Zhao, Guanqun",
+        "Gong, Enlei",
+        "Ma, Xing",
+        "Fu, Xiaoliang",
+        "Chen, Zeyu"
+      ],
+      "first_submitted": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28076",
+      "summary": "Contrasts the policy's reflections on successful and failed rollouts to construct group-level guidance. It redistributes trajectory advantages across turns while preserving the verifier-determined update direction.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2607.28076",
+      "code_url": "https://github.com/BinbZheng1/GRSD",
+      "related_ids": [
+        "2609.36742",
+        "2606.11559"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2607.28582",
+      "title": "$\\beta$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
+      "label": "β-OPSD",
+      "authors": [
+        "Xu, Jiawei",
+        "Liu, Minghui",
+        "Zhang, Juzheng",
+        "Goldstein, Tom",
+        "Huang, Furong"
+      ],
+      "first_submitted": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28582",
+      "summary": "Derives a KL-regularized policy-optimization family and realizes its target through reference-teacher logit interpolation. Adds explicit reference strength and return-to-go credit; closely related to SR-OPSD's target-construction question.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2607.28582",
+      "code_url": null,
+      "related_ids": [
+        "2608.09745",
+        "2608.26019"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2608.05987",
+      "title": "AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning",
+      "label": "AgentOPSD",
+      "authors": [
+        "Wang, Zi-Han",
+        "Lu, Zhengxi",
+        "Yao, Zhiyuan",
+        "Wu, Jinyang",
+        "Wu, Jie",
+        "Cai, Zhengzhou",
+        "Sun, Yueqing",
+        "Ye, Ziang",
+        "Hao, Linji",
+        "Gu, Qi",
+        "Cai, Xunliang",
+        "Shen, Yongliang",
+        "Yang, Yujiu"
+      ],
+      "first_submitted": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05987",
+      "summary": "Aggregates token-level teacher-student gaps into turn evidence and recursively updates a success-belief proxy. The resulting weights refine temporal credit without a learned critic; the Bayesian interpretation uses a computable proxy for unavailable outcome-conditioned policies.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.05987",
+      "code_url": "https://github.com/ZethWang/AgentOPSD",
+      "related_ids": [
+        "2606.11559",
+        "2604.10674"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2608.06296",
+      "title": "On-Policy Self-Distillation without Any Supervision",
+      "label": "U-OPSD",
+      "authors": [
+        "Li, Yijiang",
+        "Wang, Bingyang",
+        "Liang, Yijun",
+        "Tian, Yunjie",
+        "Fu, Di",
+        "Vasconcelos, Nuno"
+      ],
+      "first_submitted": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.06296",
+      "summary": "Builds a pseudo-reference from majority agreement and distills along disagreeing completions, without gold answers or an external teacher. The paper's limitations emphasize canonicalizable answers, base-model competence, and smaller gains in thinking mode.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.06296",
+      "code_url": "https://github.com/williamium3000/u-opsd",
+      "related_ids": [
+        "2608.08764",
+        "2608.27448",
+        "2605.17497"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Unsupervised and self-generated supervision"
+    },
+    {
+      "id": "2608.08764",
+      "title": "Learning from Consensus and Disagreement: Unsupervised On-Policy Self-Distillation with Minority-Trajectory Contrast",
+      "label": "CoDA",
+      "authors": [
+        "Guo, Jiaxin",
+        "Yue, Yanwei",
+        "Fan, Xuanbo",
+        "Yang, Chunyu",
+        "Zhang, Yan"
+      ],
+      "first_submitted": "2026-08-09",
+      "url": "https://arxiv.org/abs/2608.08764",
+      "summary": "Uses answer consensus to condition a self-teacher and adds reference-anchored, KTO-style calibration of minority trajectories. Unlike U-OPSD's correction of disagreeing completions, it also collects fresh student trajectories for distribution alignment.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.08764",
+      "code_url": null,
+      "related_ids": [
+        "2608.06296",
+        "2608.27448"
+      ],
+      "reading_priority": 6,
+      "coverage": "targeted-full-text",
+      "category": "Unsupervised and self-generated supervision"
+    },
+    {
+      "id": "2608.09228",
+      "title": "Privileged Solutions or Context-Induced Teacher Behavior? Dissecting On-Policy Self-Distillation",
+      "label": "OP²SD",
+      "authors": [
+        "Ichihara, Yuki",
+        "Iwase, Naoto",
+        "Quamar, Mohammad Atif",
+        "Komiyama, Junpei"
+      ],
+      "first_submitted": "2026-08-10",
+      "url": "https://arxiv.org/abs/2608.09228",
+      "summary": "Replaces the paired solution with a worked example from another problem while preserving the OPSD training setup. Tests whether gains require target-specific answers or can arise from teacher behavior induced by context; arbitrary context is not established as equally useful.",
+      "scope": "OPSD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2608.09228",
+      "code_url": "https://github.com/MBZUAI-reasoninglab/OP2SD",
+      "related_ids": [
+        "2601.18734",
+        "2609.20612"
+      ],
+      "reading_priority": 2,
+      "coverage": "targeted-full-text",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2608.09745",
+      "title": "SR-OPSD: Self-Referenced On-Policy Self-Distillation",
+      "label": "SR-OPSD",
+      "authors": [
+        "Sun, Zhuo",
+        "Li, Entong",
+        "Zhao, Yanlong",
+        "Cheng, Xiaoyuan",
+        "Yuan, Wenxuan",
+        "Li, Kaiyu",
+        "Liu, Che",
+        "Liu, Huihang",
+        "He, Baihua",
+        "Zhang, Xinyu",
+        "Zhu, Harrison Bo Hua",
+        "Zeng, Li"
+      ],
+      "first_submitted": "2026-08-10",
+      "url": "https://arxiv.org/abs/2608.09745",
+      "summary": "Combines a geometric target anchored to the frozen initial policy with forward Rényi projection. Target construction and projection interact; its fixed-context analysis does not establish stability of the entire evolving training process.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.09745",
+      "code_url": null,
+      "related_ids": [
+        "2607.28582",
+        "2607.28022"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2608.13040",
+      "title": "Latent On-Policy Self-Distillation",
+      "label": "LOPD",
+      "authors": [
+        "Zhang, Guibin",
+        "Lyu, Jiayang",
+        "Sun, Ran",
+        "Yu, Xinlei",
+        "Zhao, Haoyu",
+        "Ren, Qibing",
+        "Yan, Shuicheng"
+      ],
+      "first_submitted": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13040",
+      "summary": "Learns continuous privileged context from retrieved experiences rather than prescribing a natural-language skill format. A privilege-margin constraint prevents the teacher advantage from collapsing during context learning.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.13040",
+      "code_url": "https://github.com/bingreeky/LOPD",
+      "related_ids": [
+        "2609.36695",
+        "2604.10674"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Attention, representations, and latent context"
+    },
+    {
+      "id": "2608.14945",
+      "title": "Trust Is Not Enough: Influence Calibration for On-Policy Self-Distillation in Agentic RL",
+      "label": "ICSD",
+      "authors": [
+        "Lan, Qizhen",
+        "Xiao, Xi",
+        "Guan, Xiangchen",
+        "Fan, Mengchen",
+        "Lin, Moule",
+        "Choi, Jung Im",
+        "Zhu, Lijing"
+      ],
+      "first_submitted": "2026-08-14",
+      "url": "https://arxiv.org/abs/2608.14945",
+      "summary": "Weights privileged self-distillation by its estimated compatibility with the current RL objective, while preserving auxiliary-loss mass within each turn. Teacher confidence alone is treated as insufficient evidence that an update will help the task.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.14945",
+      "code_url": "https://github.com/lanqz7766/Influence-Calibration-for-On-Policy-Self-Distillation-in-Agentic-RL",
+      "related_ids": [
+        "2609.36742",
+        "2605.13255"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2608.26019",
+      "title": "DualOPSD: Adaptive Privileged Teachers for On-Policy Self-Distillation",
+      "label": "DualOPSD",
+      "authors": [
+        "Chen, Yutong",
+        "Guo, Guangfu",
+        "Xu, Zhichao",
+        "Liu, Kunpeng"
+      ],
+      "first_submitted": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.26019",
+      "summary": "Alternates student learning with teacher adaptation on the same rollout. Its own limitations report scale-dependent accuracy effects, one training seed, and a reversal at 1.7B; reduced teacher-student KL is not by itself evidence of better reasoning.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.26019",
+      "code_url": null,
+      "related_ids": [
+        "2609.37132",
+        "2609.05295"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2608.27448",
+      "title": "TTPO: Test-Time Policy Optimization",
+      "label": "TTPO",
+      "authors": [
+        "Wang, Aozhe",
+        "Lu, Zhengxi",
+        "Wang, Jianze",
+        "Lv, Shangke",
+        "Liu, Ying",
+        "Lu, Weiming",
+        "Xiao, Jun",
+        "Zhuang, Yueting",
+        "Yang, Hua",
+        "Chen, Qianglong",
+        "Shen, Yongliang"
+      ],
+      "first_submitted": "2026-08-27",
+      "url": "https://arxiv.org/abs/2608.27448",
+      "summary": "Routes majority-agreeing rollouts to distillation and disagreeing rollouts to a grouped-RL penalty, with token selection in both branches. Particularly relevant to label-free test-time adaptation, whose evaluation protocol differs from ordinary held-out post-training.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2608.27448",
+      "code_url": "https://github.com/ZJU-REAL/TTPO",
+      "related_ids": [
+        "2608.06296",
+        "2608.08764"
+      ],
+      "reading_priority": 7,
+      "coverage": "targeted-full-text",
+      "category": "Unsupervised and self-generated supervision"
+    },
+    {
+      "id": "2609.05295",
+      "title": "RISE: Recursive Improvement via Self-Extrapolating Policy Distillation",
+      "label": "RISE",
+      "authors": [
+        "Li, Yang",
+        "Yavuz, Semih",
+        "Joty, Shafiq"
+      ],
+      "first_submitted": "2026-09-04",
+      "url": "https://arxiv.org/abs/2609.05295",
+      "summary": "Extrapolates the model's own RLVR progress in weights or logits to synthesize an improving teacher. Removes privileged-context dependence while retaining outcome supervision. Compare with B-OPSD's explicitly trained future teacher and restarted student.",
+      "scope": "Core self-distillation + RL",
+      "pdf_url": "https://arxiv.org/pdf/2609.05295",
+      "code_url": null,
+      "related_ids": [
+        "2608.26019",
+        "2609.37132"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2609.09957",
+      "title": "Beyond Verified Answers: Solver-Informed Self-Distillation for Bootstrapping Operations Research Language Models",
+      "label": "SOLID",
+      "authors": [
+        "Zhu, Rui",
+        "Cao, Minglong",
+        "Zhou, Chenyu",
+        "Lin, Jianghao",
+        "Ge, Dongdong"
+      ],
+      "first_submitted": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.09957",
+      "summary": "Uses solver artifacts and majority groups of executed candidate programs as pseudo-references for operations-research formulations. Connects label-free reference construction to a domain with executable feedback; it is not supervision-free in the sense of having no environment.",
+      "scope": "Core OPSD application",
+      "pdf_url": "https://arxiv.org/pdf/2609.09957",
+      "code_url": "https://github.com/AIOR-Research/SOLID",
+      "related_ids": [
+        "2608.06296",
+        "2606.11559"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Context and domain extensions"
+    },
+    {
+      "id": "2609.20612",
+      "title": "What Does Privileged Information Add to On-Policy Self-Distillation?",
+      "label": "What Does Privileged Information Add?",
+      "authors": [
+        "Zhang, XiuYu",
+        "Chow, Wei",
+        "Fang, Junfeng",
+        "Zhu, Xingyu",
+        "Liang, Zhenkai",
+        "Chua, Tat-Seng"
+      ],
+      "first_submitted": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.20612",
+      "summary": "Uses matched reference-free and six-view controls to separate distillation gains from the marginal benefit of privileged references. Highlights dependence on training and evaluation reasoning modes, directly complementing the OP²SD intervention.",
+      "scope": "OPSD diagnosis",
+      "pdf_url": "https://arxiv.org/pdf/2609.20612",
+      "code_url": "https://github.com/xiuyuz/opsd-reference-study",
+      "related_ids": [
+        "2601.18734",
+        "2608.09228",
+        "2607.05184"
+      ],
+      "reading_priority": 3,
+      "coverage": "targeted-full-text",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2609.20784",
+      "title": "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning",
+      "label": "RetireOPD",
+      "authors": [
+        "Yu, Yan",
+        "Lu, Zhengxi",
+        "Liu, Yizhou",
+        "Pan, Yichen",
+        "Wang, Aozhe",
+        "Chen, Qipeng",
+        "Yang, Hua",
+        "Zhang, Wenqi",
+        "Chen, Qianglong",
+        "Shen, Yongliang"
+      ],
+      "first_submitted": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.20784",
+      "summary": "Trains a skill-conditioned teacher, jointly trains the skill-free student with RL and distillation, then retires the teacher when transfer stalls and the student reaches a competence threshold. Adds a training-stage perspective to teacher quality.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2609.20784",
+      "code_url": "https://github.com/ZJU-REAL/SDAR",
+      "related_ids": [
+        "2604.10674",
+        "2607.01763"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2609.24974",
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "label": "Harness-Zero",
+      "authors": [
+        "Ye, Haoran",
+        "Lu, Yuxing",
+        "Dong, Haonan",
+        "Su, Zhaochen",
+        "Song, Guojie"
+      ],
+      "first_submitted": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24974",
+      "summary": "A harnessing agent reviews and corrects student proposals to collect trajectories, followed by SFT. It transfers behavior from an evolved harness to a fixed target harness, rather than matching privileged teacher token distributions in an OPSD loop.",
+      "scope": "Adjacent harness distillation",
+      "pdf_url": "https://arxiv.org/pdf/2609.24974",
+      "code_url": "https://github.com/metaevo-ai/harness-zero",
+      "related_ids": [
+        "2605.08741",
+        "2610.02858"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2609.27307",
+      "title": "Learn How to Act from Your Own Interactions: On-Policy Self-Distillation for GUI Agents",
+      "label": "GUI-SD-v2",
+      "authors": [
+        "Zhang, Yan",
+        "Wu, Daiqing",
+        "Shen, Huawen",
+        "Li, Liang",
+        "Cao, Gang",
+        "Gong, Zhi",
+        "Dai, Wei",
+        "Zhang, Xiaode",
+        "Ma, Can",
+        "Zhou, Yu"
+      ],
+      "first_submitted": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27307",
+      "summary": "First improves privilege-following ability, then selectively distills step-specific reasoning and memory guidance for multi-turn GUI agents. Extends teacher-quality and temporal-credit questions to GUI interaction.",
+      "scope": "Core OPSD application",
+      "pdf_url": "https://arxiv.org/pdf/2609.27307",
+      "code_url": null,
+      "related_ids": [
+        "2608.05987",
+        "2607.14777",
+        "2609.20784"
+      ],
+      "reading_priority": null,
+      "coverage": "abstract-screened",
+      "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2609.30878",
+      "title": "TISD: On-Policy Self-Distillation with Trajectory Intervention",
+      "label": "TISD",
+      "authors": [
+        "Lee, Taeckyung",
+        "Amankos, Rinat",
+        "Kim, Jeonghye",
+        "Yoon, Hyungjun",
+        "Jin, Woogyeol",
+        "Lee, Sung-Ju"
+      ],
+      "first_submitted": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.30878",
+      "summary": "Uses teacher disagreement to choose a branch token, forces that action, and returns suffix generation to the student before distillation. It changes the visited training states, not just the weight assigned to existing tokens; include regeneration cost in comparisons.",
+      "scope": "Core OPSD with intervention",
+      "pdf_url": "https://arxiv.org/pdf/2609.30878",
+      "code_url": "https://github.com/taeckyung/TISD",
+      "related_ids": [
+        "2610.05070",
+        "2605.21606"
+      ],
+      "reading_priority": 12,
+      "coverage": "targeted-full-text",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2609.33200",
+      "title": "Teach Yourself Where to Look: On-Policy Attention Self-Distillation for Reasoning",
+      "label": "OPASD",
+      "authors": [
+        "Arib, Safaeid Hossain",
+        "Akter, Rabeya",
+        "Swapnil, Ismam Nur",
+        "Sayeedi, Md. Faiyaz Abdullah",
+        "Mohiuddin, Tasnim",
+        "Islam, Md Mofijul"
+      ],
+      "first_submitted": "2026-09-27",
+      "url": "https://arxiv.org/abs/2609.33200",
+      "summary": "Adds attention supervision to token matching, projecting the privileged teacher's attention onto positions visible to the student before normalization. A direct complement to PR-OPD's hidden-state alignment and LOPD's learned privileged context.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2609.33200",
+      "code_url": null,
+      "related_ids": [
+        "2609.36642",
+        "2608.13040"
+      ],
+      "reading_priority": 9,
+      "coverage": "targeted-full-text",
+      "category": "Attention, representations, and latent context"
+    },
+    {
+      "id": "2609.36642",
+      "title": "PR-OPD: Privileged Representation On-policy Self-Distillation for Agentic Reinforcement Learning",
+      "label": "PR-OPD",
+      "authors": [
+        "Li, Muyang",
+        "Yang, Jie",
+        "Fang, Zhengyu",
+        "Zhu, Junchao",
+        "Xiao, Zhengkun",
+        "Deng, Ruining",
+        "Jiang, Zhe",
+        "Chen, Shigang"
+      ],
+      "first_submitted": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36642",
+      "summary": "After an RL warm start, the model writes hindsight skills and aligns projected student hidden states with its privileged teacher. This tests whether useful guidance resides in representations even when token probabilities barely change.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2609.36642",
+      "code_url": "https://github.com/balibata/PR-OPD",
+      "related_ids": [
+        "2609.33200",
+        "2608.13040"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Attention, representations, and latent context"
+    },
+    {
+      "id": "2609.36695",
+      "title": "Know Thyself, Teach Thyself: Internal Information Flow for Selective Self-Distillation",
+      "label": "InFlow",
+      "authors": [
+        "Wang, Rui",
+        "Wang, Ruijie",
+        "Chen, Bo",
+        "Long, Jiangxuan",
+        "Liang, Yingyu"
+      ],
+      "first_submitted": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36695",
+      "summary": "Retrieves useful sources from calibrated hidden-state trajectories, then selects examples by the change in teacher answer beliefs after retrieval. Connects retrieval quality and sample selection to on-policy distillation without gold labels or a stronger teacher.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2609.36695",
+      "code_url": "https://github.com/1240148048/INFLOW",
+      "related_ids": [
+        "2608.13040",
+        "2608.06296"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Unsupervised and self-generated supervision"
+    },
+    {
+      "id": "2609.36742",
+      "title": "SIPO: Unifying Reinforcement Learning with On-Policy Self-Distillation",
+      "label": "SIPO",
+      "authors": [
+        "Yue, Zhenrui",
+        "Zeng, Huimin",
+        "Wang, Yueqi",
+        "Liu, Yaokun",
+        "Mo, Fengran",
+        "Zhang, Jinghan",
+        "Jia, Mung Yao",
+        "Lee, Gyuseok",
+        "Zhang, Yang",
+        "Wei, Na",
+        "Wang, Dong"
+      ],
+      "first_submitted": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36742",
+      "summary": "Contrasts teacher contexts built from a reference answer and rollout-group mistakes to obtain dense token credit while retaining task-reward optimization. Especially close to RLCSD; unlike purely group-relative outcome advantages, it can provide a signal in all-failure groups.",
+      "scope": "Core OPSD + RL",
+      "pdf_url": "https://arxiv.org/pdf/2609.36742",
+      "code_url": "https://github.com/Yueeeeeeee/SIPO",
+      "related_ids": [
+        "2606.11709",
+        "2607.28076",
+        "2608.14945"
+      ],
+      "reading_priority": 5,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2609.37132",
+      "title": "Train Ahead, Distill Back: Bootstrapping On-Policy Self-Distillation for Large Language Models",
+      "label": "B-OPSD",
+      "authors": [
+        "Zhang, Zheng",
+        "Tan, Xinyue",
+        "Li, Lufei",
+        "Zhang, Xinyi",
+        "Li, Yexin",
+        "Ren, Kan"
+      ],
+      "first_submitted": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.37132",
+      "summary": "Temporarily trains ahead to obtain a future teacher, freezes it, restarts the student, and distills on the restarted student's trajectories. Studies both answer-available and answer-free pathways; the lookahead stage adds training work that belongs in cost comparisons.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2609.37132",
+      "code_url": null,
+      "related_ids": [
+        "2608.26019",
+        "2608.06296",
+        "2609.05295"
+      ],
+      "reading_priority": 8,
+      "coverage": "targeted-full-text",
+      "category": "Self-teacher design"
+    },
+    {
+      "id": "2610.02858",
+      "title": "Harness-Aware Distillation for Small Language Model Agents",
+      "label": "HAD",
+      "authors": [
+        "Choi, Moonseok",
+        "Moon, Taehong",
+        "Nam, Giung",
+        "Lee, Juho"
+      ],
+      "first_submitted": "2026-10-02",
+      "url": "https://arxiv.org/abs/2610.02858",
+      "summary": "Distills a larger teacher into a smaller agent that retains the same harness. Adds an action preference from teacher responses with versus without harness information and rejects invalid preferences. Its deployment premise differs from removing the harness.",
+      "scope": "Adjacent OPD",
+      "pdf_url": "https://arxiv.org/pdf/2610.02858",
+      "code_url": null,
+      "related_ids": [
+        "2605.08741",
+        "2609.24974"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Related OPD and harness work"
+    },
+    {
+      "id": "2610.05070",
+      "title": "Outcome-Guided On-Policy Self-Distillation",
+      "label": "OG-OPSD",
+      "authors": [
+        "Wang, ZheXu",
+        "Luo, Mao-Lin",
+        "Hong, Yankun",
+        "Zhou, Zi-Hao",
+        "Ye, Bo",
+        "Zhao, Jian",
+        "Tong, Xialiang",
+        "Zhang, Min-Ling",
+        "Wei, Tong"
+      ],
+      "first_submitted": "2026-10-04",
+      "url": "https://arxiv.org/abs/2610.05070",
+      "summary": "Uses forward KL on complete correct trajectories and reverse KL on selected prefixes of incorrect ones. Cumulative teacher entropy helps choose the supervised prefix, connecting outcome correctness to both objective and token selection.",
+      "scope": "Core OPSD",
+      "pdf_url": "https://arxiv.org/pdf/2610.05070",
+      "code_url": null,
+      "related_ids": [
+        "2605.21606",
+        "2605.13255",
+        "2605.22263"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Objectives, reliability, and diagnostics"
+    }
+  ]
+}
