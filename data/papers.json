@@ -169,6 +169,36 @@
       "category": "Related OPD and harness work"
     },
     {
+      "id": "2605.07396",
+      "title": "Rubric-based On-policy Distillation",
+      "authors": [
+        "Fang, Junfeng",
+        "Hong, Zhepei",
+        "Zheng, Mao",
+        "Song, Mingyang",
+        "Li, Gengsheng",
+        "Jiang, Houcheng",
+        "Zhang, Dan",
+        "Guo, Haiyun",
+        "Wang, Xiang",
+        "Chua, Tat-Seng"
+      ],
+      "first_submitted": "2026-05-08",
+      "url": "https://arxiv.org/abs/2605.07396",
+      "pdf_url": "https://arxiv.org/pdf/2605.07396",
+      "label": "ROPD",
+      "summary": "Induces shared rubrics from teacher and student responses, scores rollouts with a verifier, and optimizes rubric rewards using GRPO. Supports text-only teachers and different tokenizers; distinct from verifier-free self-distillation and direct token KL matching.",
+      "scope": "Adjacent OPD / rubric rewards",
+      "category": "Related OPD and harness work",
+      "code_url": "https://github.com/Peregrine123/ROPD_official",
+      "related_ids": [
+        "2606.12507",
+        "2601.18734"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text"
+    },
+    {
       "id": "2605.08741",
       "title": "Training with Harnesses: On-Policy Harness Self-Distillation for Complex Reasoning",
       "label": "OPHSD",
@@ -507,6 +537,62 @@
       "reading_priority": null,
       "coverage": "targeted-full-text",
       "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2606.12507",
+      "title": "Rubric-Guided Self-Distillation: Post-Training Without Rubric Verifiers",
+      "authors": [
+        "Rezaei, MohammadHossein",
+        "Mahmoud, Anas",
+        "Wang, Zihao",
+        "Tyagi, Utkarsh",
+        "Gosai, Advait",
+        "Dumitru, Razvan-Gabriel",
+        "Sabharwal, Aakash",
+        "Liu, Bing",
+        "He, Yunzhong"
+      ],
+      "first_submitted": "2026-06-10",
+      "url": "https://arxiv.org/abs/2606.12507",
+      "pdf_url": "https://arxiv.org/pdf/2606.12507",
+      "label": "RGSD",
+      "summary": "A frozen rubric-conditioned copy of the base model supervises student prefixes using clipped JSD (beta 0.5), with no training-time judge. Thinking-token masking limits rubric leakage. The study does not compare JSD against KL under matched conditions.",
+      "scope": "Core OPSD / rubric context",
+      "category": "Self-teacher design",
+      "code_url": null,
+      "related_ids": [
+        "2605.07396",
+        "2601.19897",
+        "2601.18734"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text"
+    },
+    {
+      "id": "2606.19327",
+      "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
+      "authors": [
+        "Gu, Siyi",
+        "Chen, Jialin",
+        "Zhou, Sophia",
+        "Cohan, Arman",
+        "Ying, Rex"
+      ],
+      "first_submitted": "2026-06-17",
+      "url": "https://arxiv.org/abs/2606.19327",
+      "pdf_url": "https://arxiv.org/pdf/2606.19327",
+      "label": "RCSD",
+      "summary": "Learns a rubric generator using answer-privileged OPSD, then conditions a self-teacher on its rubrics to train a reasoner. Its Qwen3-8B loss ablation favors forward KL on average (70.6) over reverse KL (69.9) and JSD (69.6); individual benchmarks differ.",
+      "scope": "Core OPSD / learned rubrics",
+      "category": "Self-teacher design",
+      "code_url": "https://github.com/carriegu0818/RCSD",
+      "related_ids": [
+        "2606.12507",
+        "2605.07396",
+        "2601.19897"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text"
     },
     {
       "id": "2606.26091",
@@ -873,6 +959,33 @@
       "reading_priority": null,
       "coverage": "targeted-full-text",
       "category": "Objectives, reliability, and diagnostics"
+    },
+    {
+      "id": "2608.14684",
+      "title": "Mitigating Rubric Interference in LLM Judges via On-Policy Self-Distillation",
+      "authors": [
+        "Yu, Dingyao",
+        "Zhang, Tong",
+        "Mou, Yutao",
+        "Zhang, Yunxiao",
+        "Ye, Wei",
+        "Zhang, Shikun"
+      ],
+      "first_submitted": "2026-08-05",
+      "url": "https://arxiv.org/abs/2608.14684",
+      "pdf_url": "https://arxiv.org/pdf/2608.14684",
+      "label": "SARA",
+      "summary": "Aligns joint rubric judgments to single-rubric EMA-teacher analysis with symmetric JSD, plus a separate full-context structural-preservation term. Improves judge consistency; isolated judgments are not guaranteed correct. Primarily instruct-mode evaluation, with limited thinking-mode transfer.",
+      "scope": "Core OPSD / judge consistency",
+      "category": "Objectives, reliability, and diagnostics",
+      "code_url": null,
+      "related_ids": [
+        "2606.12507",
+        "2605.07396",
+        "2606.19327"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text"
     },
     {
       "id": "2608.05987",
@@ -1284,6 +1397,38 @@
       "reading_priority": null,
       "coverage": "abstract-screened",
       "category": "Agents, skills, and harness self-distillation"
+    },
+    {
+      "id": "2609.30652",
+      "title": "Recursive Self-Improvement via On-Policy Distillation for Reasoning",
+      "authors": [
+        "Yin, Shangjian",
+        "Zhao, Zehao",
+        "Asadi, Kavosh",
+        "Liu, Rui",
+        "Lu, Yuchen",
+        "Mei, Shike",
+        "Cui, Hang",
+        "Simon, Luke",
+        "Shi, Zhouxing",
+        "Firooz, Hamed"
+      ],
+      "first_submitted": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.30652",
+      "pdf_url": "https://arxiv.org/pdf/2609.30652",
+      "label": "DCE + SRCL",
+      "summary": "Refreshes the detached privileged teacher from the current student each round and adds cross-entropy on shorter, verified self-rewrites. Forward KL leads its 8B loss comparison; non-thinking-mode, selected-checkpoint results do not establish frontier thinking-model gains.",
+      "scope": "Core OPSD / recursive improvement",
+      "category": "Self-teacher design",
+      "code_url": null,
+      "related_ids": [
+        "2601.18734",
+        "2601.19897",
+        "2608.26019",
+        "2609.37132"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text"
     },
     {
       "id": "2609.30878",
