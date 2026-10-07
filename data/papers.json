@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "recent_window": {
     "start": "2026-04-06",
     "end": "2026-10-06"
@@ -27,6 +27,31 @@
       "related_ids": [
         "2608.06296",
         "2608.26019"
+      ],
+      "reading_priority": null,
+      "coverage": "targeted-full-text",
+      "category": "Foundations and overviews"
+    },
+    {
+      "id": "2601.19897",
+      "title": "Self-Distillation Enables Continual Learning",
+      "authors": [
+        "Shenfeld, Idan",
+        "Damani, Mehul",
+        "Hübotter, Jonas",
+        "Agrawal, Pulkit"
+      ],
+      "first_submitted": "2026-01-27",
+      "url": "https://arxiv.org/abs/2601.19897",
+      "pdf_url": "https://arxiv.org/pdf/2601.19897",
+      "label": "SDFT / Continual Learning",
+      "summary": "Uses a demonstration-conditioned EMA self-teacher to supervise student-generated trajectories. Reports better new-task learning and retention than SFT; the practical recipe favors forward KL despite the reverse-KL derivation. Foundational background first submitted January 27, revised August 7, 2026.",
+      "scope": "Core OPSD / continual learning",
+      "code_url": "https://github.com/idanshen/Self-Distillation",
+      "related_ids": [
+        "2601.18734",
+        "2607.01763",
+        "2609.20612"
       ],
       "reading_priority": null,
       "coverage": "targeted-full-text",

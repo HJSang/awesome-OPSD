@@ -2,11 +2,11 @@
 
 **A curated reading list of on-policy self-distillation for language models and agents.**
 
-![Papers](https://img.shields.io/badge/papers-54-087b74) ![Code](https://img.shields.io/badge/linked_code_repositories-28-376ba0) ![Updated](https://img.shields.io/badge/updated-2026--10--06-555)
+![Papers](https://img.shields.io/badge/papers-55-087b74) ![Code](https://img.shields.io/badge/linked_code_repositories-29-376ba0) ![Updated](https://img.shields.io/badge/updated-2026--10--07-555)
 
 Papers, code, and concise method annotations covering self-teacher construction, privileged context, reasoning stability, label-free learning, and multi-turn agents. Related OPD and harness work is labeled separately.
 
-**Current coverage:** 54 papers, including 53 first submitted from **2026-04-06 through 2026-10-06**, plus the original OPSD paper as earlier background. Dates refer to the **first arXiv submission**, not the latest revision or conference appearance.
+**Current coverage:** 55 papers, including 53 first submitted from **2026-04-06 through 2026-10-06**, plus foundational papers as earlier background. Dates refer to the **first arXiv submission**, not the latest revision or conference appearance.
 
 [Paper data](data/papers.json) · [BibTeX](papers.bib) · [Contributing](CONTRIBUTING.md)
 
@@ -31,7 +31,7 @@ This diagram describes the common privileged-context recipe. Some listed methods
 ## Contents
 
 - [Suggested reading paths](#suggested-reading-paths)
-- [Foundations and overviews](#foundations-and-overviews) (2)
+- [Foundations and overviews](#foundations-and-overviews) (3)
 - [Self-teacher design](#self-teacher-design) (8)
 - [Objectives, reliability, and diagnostics](#objectives-reliability-and-diagnostics) (16)
 - [Unsupervised and self-generated supervision](#unsupervised-and-self-generated-supervision) (5)
@@ -46,6 +46,7 @@ This diagram describes the common privileged-context recipe. Some listed methods
 | Question | Reading path |
 | --- | --- |
 | How does OPSD work, and what does privilege add? | [OPSD / Self-Distilled Reasoner](https://arxiv.org/abs/2601.18734) → [OP²SD](https://arxiv.org/abs/2608.09228) → [What Does Privileged Information Add?](https://arxiv.org/abs/2609.20612) |
+| Can it learn from demonstrations while retaining prior skills? | [SDFT / Continual Learning](https://arxiv.org/abs/2601.19897) → [Denser ≠ Better](https://arxiv.org/abs/2607.01763) |
 | Why can reasoning degrade? | [Rethinking OPSD for Thinking Models](https://arxiv.org/abs/2607.05184) → [Purified OPSD](https://arxiv.org/abs/2607.02234) → [RLCSD](https://arxiv.org/abs/2606.11709) → [SIPO](https://arxiv.org/abs/2609.36742) |
 | Can it work without gold answers? | [U-OPSD](https://arxiv.org/abs/2608.06296) → [CoDA](https://arxiv.org/abs/2608.08764) → [TTPO](https://arxiv.org/abs/2608.27448) |
 | Can the teacher improve with the student? | [DualOPSD](https://arxiv.org/abs/2608.26019) → [B-OPSD](https://arxiv.org/abs/2609.37132) → [RISE](https://arxiv.org/abs/2609.05295) |
@@ -61,6 +62,7 @@ The original OPSD formulation and a short orientation reference. Foundational wo
 | First submitted | Paper | Method / connection | Code |
 | --- | --- | --- | --- |
 | 2026-05-18 | **Brief OPSD Overview**<br>[A Brief Overview: On-Policy Self-Distillation In Large Language Models](https://arxiv.org/abs/2605.18141) · [PDF](https://arxiv.org/pdf/2605.18141) | An introductory overview of the OPSD setup and design choices. Included as an orientation reference, not as a new algorithm or independent experimental validation of the original OPSD claims. | — |
+| 2026-01-27 | **SDFT / Continual Learning**<br>[Self-Distillation Enables Continual Learning](https://arxiv.org/abs/2601.19897) · [PDF](https://arxiv.org/pdf/2601.19897) | Uses a demonstration-conditioned EMA self-teacher to supervise student-generated trajectories. Reports better new-task learning and retention than SFT; the practical recipe favors forward KL despite the reverse-KL derivation. Foundational background first submitted January 27, revised August 7, 2026. | [Code](https://github.com/idanshen/Self-Distillation) |
 | 2026-01-26 | **OPSD / Self-Distilled Reasoner**<br>[Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models](https://arxiv.org/abs/2601.18734) · [PDF](https://arxiv.org/pdf/2601.18734) | A problem-only student learns on its own rollouts from a self-teacher given a verified solution. The released main recipe uses a frozen base teacher and pointwise clipping. Foundational background first submitted before the recent coverage window. | [Code](https://github.com/siyan-zhao/OPSD) |
 
 ## Self-teacher design
@@ -171,7 +173,7 @@ Useful comparisons that do not share the complete OPSD setup. This section inclu
 - **Supervision:** “self-generated” and “unsupervised” are different claims. Verifiers, environment feedback, solver outputs, and training-stage teacher construction can supply additional information.
 - **Evidence:** annotations summarize the papers rather than independently reproduced results. Model family, reasoning mode, training budget, and evaluation protocol can change conclusions. This is a curated reading list, not an exhaustive systematic review.
 - **Reading coverage:** `coverage` in [the data](data/papers.json) distinguishes targeted full-text reading from abstract screening. Neither label implies a complete proof audit or experimental reproduction.
-- **Code links:** 28 public repositories were reachable when checked on 2026-10-06; implementations were not all executed or audited.
+- **Code links:** 29 author-associated public repositories are linked. Links are checked when added; implementations were not all executed or audited.
 - **Maintenance:** edit `data/papers.json`, then run `python3 scripts/build_readme.py` to regenerate this README and the bibliography.
 
 ## Acknowledgment

@@ -74,7 +74,7 @@ def main():
         '',
         f'**Current coverage:** {count} papers, including {recent} first submitted from '
         f'**{data["recent_window"]["start"]} through {data["recent_window"]["end"]}**, plus '
-        'the original OPSD paper as earlier background. Dates refer to the **first arXiv submission**, not the latest revision or conference appearance.',
+        'foundational papers as earlier background. Dates refer to the **first arXiv submission**, not the latest revision or conference appearance.',
         '',
         '[Paper data](data/papers.json) · [BibTeX](papers.bib) · [Contributing](CONTRIBUTING.md)',
         '',
@@ -112,6 +112,7 @@ def main():
         '| Question | Reading path |',
         '| --- | --- |',
         '| How does OPSD work, and what does privilege add? | '+ ' → '.join(paper_link(i) for i in ['2601.18734','2608.09228','2609.20612'])+' |',
+        '| Can it learn from demonstrations while retaining prior skills? | '+' → '.join(paper_link(i) for i in ['2601.19897','2607.01763'])+' |',
         '| Why can reasoning degrade? | '+' → '.join(paper_link(i) for i in ['2607.05184','2607.02234','2606.11709','2609.36742'])+' |',
         '| Can it work without gold answers? | '+' → '.join(paper_link(i) for i in ['2608.06296','2608.08764','2608.27448'])+' |',
         '| Can the teacher improve with the student? | '+' → '.join(paper_link(i) for i in ['2608.26019','2609.37132','2609.05295'])+' |',
@@ -134,7 +135,7 @@ def main():
         '- **Supervision:** “self-generated” and “unsupervised” are different claims. Verifiers, environment feedback, solver outputs, and training-stage teacher construction can supply additional information.',
         '- **Evidence:** annotations summarize the papers rather than independently reproduced results. Model family, reasoning mode, training budget, and evaluation protocol can change conclusions. This is a curated reading list, not an exhaustive systematic review.',
         '- **Reading coverage:** `coverage` in [the data](data/papers.json) distinguishes targeted full-text reading from abstract screening. Neither label implies a complete proof audit or experimental reproduction.',
-        f'- **Code links:** {code_count} public repositories were reachable when checked on {data["updated"]}; implementations were not all executed or audited.',
+        f'- **Code links:** {code_count} author-associated public repositories are linked. Links are checked when added; implementations were not all executed or audited.',
         '- **Maintenance:** edit `data/papers.json`, then run `python3 scripts/build_readme.py` to regenerate this README and the bibliography.',
         '', '## Acknowledgment', '',
         'Inspired by the organization of [thinkwee/AwesomeOPD](https://github.com/thinkwee/AwesomeOPD). '
